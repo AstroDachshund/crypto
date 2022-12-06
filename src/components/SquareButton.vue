@@ -12,5 +12,6 @@
     border-radius: 8px;
     border: none;
     color: #9896A1;
+    cursor: pointer;
 }
 </style>

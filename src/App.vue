@@ -10,7 +10,28 @@ export default {
     SearchBar,
     BasicCardSmall,
     BasicCardLarge,
-  }
+  },
+  data() {
+    return {
+      sidebarOpen: true,
+    };
+  },
+  methods: {
+    toggleSidebar() {
+      this.sidebarOpen = !this.sidebarOpen;
+    },
+  },
+  watch: {
+    sidebarOpen() {
+      if (this.sidebarOpen) {
+        document.querySelector('.sidebar-container').style.transform = 'translateX(0)';
+        document.querySelector('.sidebar-container').style.width = '100%';
+      } else {
+        document.querySelector('.sidebar-container').style.transform = 'translateX(-100%)';
+        document.querySelector('.sidebar-container').style.width = '0';
+      }
+    },
+  },
 };
 </script>
 
@@ -24,7 +45,7 @@ export default {
           <SquareButton class="notification-button">
             <font-awesome-icon icon="fa-regular fa-bell" />
           </SquareButton>
-          <SquareButton>
+          <SquareButton @click="toggleSidebar">
             <font-awesome-icon icon="fa-solid fa-bars" />
           </SquareButton>
         </div>
