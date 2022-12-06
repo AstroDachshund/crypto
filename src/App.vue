@@ -1,19 +1,41 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+
+<script>
+import BasicCardLarge from './components/basic/BasicCardLarge.vue';
+import BasicCardSmall from './components/basic/BasicCardSmall.vue';
+import SearchBar from './components/SearchBar.vue';
+import SquareButton from './components/SquareButton.vue';
+export default {
+  components: {
+    SquareButton,
+    SearchBar,
+    BasicCardSmall,
+    BasicCardLarge,
+  },
+};
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="wrapper">
+    <div class="sidebar-container"></div>
+    <div class="main-container">
+      <section class="nav-container">
+        <SearchBar></SearchBar>
+        <div class="nav-buttons_wrapper">
+          <SquareButton>
+            <font-awesome-icon icon="fa-regular fa-bell" />
+          </SquareButton>
+          <SquareButton>
+            <font-awesome-icon icon="fa-solid fa-bars" />
+          </SquareButton>
+        </div>
+      </section>
+      <section class="dashboard-container">
+        <BasicCardSmall :name="'Current Balance'"></BasicCardSmall>
+        <BasicCardSmall :name="'Summary'"></BasicCardSmall>
+        <BasicCardLarge></BasicCardLarge>
+      </section>
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
@@ -22,9 +44,11 @@ import HelloWorld from './components/HelloWorld.vue'
   padding: 1.5em;
   will-change: filter;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
