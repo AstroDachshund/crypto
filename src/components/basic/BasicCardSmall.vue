@@ -23,7 +23,8 @@ export default {
     border-radius: 16px;
     border: none;
     color: #9896A1;
-    margin: 30px 0 0 0;
+    margin: 30px 20px 0 20px;
+    flex: 2;
 }
 
 .card-header {
@@ -49,5 +50,11 @@ export default {
 
 .dot-icon {
     height: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        flex: 1;
+    }
 }
 </style>

@@ -10,7 +10,7 @@ export default {
     SearchBar,
     BasicCardSmall,
     BasicCardLarge,
-  },
+  }
 };
 </script>
 
@@ -21,7 +21,7 @@ export default {
       <section class="nav-container">
         <SearchBar></SearchBar>
         <div class="nav-buttons_wrapper">
-          <SquareButton>
+          <SquareButton class="notification-button">
             <font-awesome-icon icon="fa-regular fa-bell" />
           </SquareButton>
           <SquareButton>
@@ -30,9 +30,9 @@ export default {
         </div>
       </section>
       <section class="dashboard-container">
-        <BasicCardSmall :name="'Current Balance'"></BasicCardSmall>
-        <BasicCardSmall :name="'Summary'"></BasicCardSmall>
-        <BasicCardLarge></BasicCardLarge>
+        <BasicCardSmall class="dashboard-item" :name="'Current Balance'"></BasicCardSmall>
+        <BasicCardSmall class="dashboard-item" :name="'Summary'"></BasicCardSmall>
+        <BasicCardLarge class="dashboard-item"></BasicCardLarge>
       </section>
     </div>
   </div>

@@ -38,4 +38,14 @@ label {
     font-size: 14px;
     transform: translate(-50%, -50%);
 }
+
+@media screen and (max-width: 375px) {
+    #search-bar {
+        width: 190px;
+    }
+
+    #search-bar::placeholder {
+        left: 35%;
+    }
+}
 </style>

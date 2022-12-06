@@ -12,12 +12,11 @@ export default {
 <style scoped>
 .card-wrapper {
     width: 100%;
-    max-width: 1055px;
     height: 504px;
     background: #F7F7F9;
     border-radius: 16px;
     border: none;
     color: #9896A1;
-    margin: 30px 0 0 0;
+    margin: 30px 20px 0 20px;
 }
 </style>
