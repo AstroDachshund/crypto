@@ -6,6 +6,7 @@
                 <font-awesome-icon class="dot-icon" icon="fa-solid fa-ellipsis-h" />
             </button>
         </div>
+        <slot></slot>
     </div>
 </template>
 <script>
@@ -24,6 +25,7 @@ export default {
     border: none;
     color: #9896A1;
     margin: 30px 20px 0 20px;
+    padding: 0 30px;
     flex: 2;
 }
 
@@ -31,7 +33,6 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
 }
 
 .card-header p {

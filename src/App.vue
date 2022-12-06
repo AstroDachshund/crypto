@@ -2,6 +2,7 @@
 <script>
 import BasicCardLarge from './components/basic/BasicCardLarge.vue';
 import BasicCardSmall from './components/basic/BasicCardSmall.vue';
+import DashboardBalance from './components/dashboard/DashboardBalance.vue';
 import SearchBar from './components/SearchBar.vue';
 import SquareButton from './components/SquareButton.vue';
 export default {
@@ -10,6 +11,7 @@ export default {
     SearchBar,
     BasicCardSmall,
     BasicCardLarge,
+    DashboardBalance,
   },
   data() {
     return {
@@ -51,7 +53,7 @@ export default {
         </div>
       </section>
       <section class="dashboard-container">
-        <BasicCardSmall class="dashboard-item" :name="'Current Balance'"></BasicCardSmall>
+        <DashboardBalance class="dashboard-item"></DashboardBalance>
         <BasicCardSmall class="dashboard-item" :name="'Summary'"></BasicCardSmall>
         <BasicCardLarge class="dashboard-item"></BasicCardLarge>
       </section>
