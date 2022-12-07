@@ -1,17 +1,19 @@
 
 <script>
 import BasicCardLarge from './components/basic/BasicCardLarge.vue';
-import BasicCardSmall from './components/basic/BasicCardSmall.vue';
+import SquareButton from './components/buttons/basic/SquareButton.vue';
+import NotificationButton from './components/buttons/NotificationButton.vue';
+import SearchBar from './components/buttons/SearchBar.vue';
 import DashboardBalance from './components/dashboard/DashboardBalance.vue';
-import SearchBar from './components/SearchBar.vue';
-import SquareButton from './components/SquareButton.vue';
+import DashboardSummary from './components/dashboard/DashboardSummary.vue';
 export default {
   components: {
     SquareButton,
     SearchBar,
-    BasicCardSmall,
     BasicCardLarge,
     DashboardBalance,
+    NotificationButton,
+    DashboardSummary,
   },
   data() {
     return {
@@ -44,35 +46,26 @@ export default {
       <section class="nav-container">
         <SearchBar></SearchBar>
         <div class="nav-buttons_wrapper">
-          <SquareButton class="notification-button">
-            <font-awesome-icon icon="fa-regular fa-bell" />
-          </SquareButton>
-          <SquareButton @click="toggleSidebar">
+          <NotificationButton class="notify"></NotificationButton>
+          <SquareButton class="menu-button" @click="toggleSidebar">
             <font-awesome-icon icon="fa-solid fa-bars" />
           </SquareButton>
         </div>
       </section>
       <section class="dashboard-container">
         <DashboardBalance class="dashboard-item"></DashboardBalance>
-        <BasicCardSmall class="dashboard-item" :name="'Summary'"></BasicCardSmall>
+        <DashboardSummary class="dashboard-item"></DashboardSummary>
         <BasicCardLarge class="dashboard-item"></BasicCardLarge>
       </section>
     </div>
   </div>
 </template>
-
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.menu-button svg {
+  transition: all 0.2s ease-in-out;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.menu-button:hover svg {
+  transform: scale(1.2)
 }
 </style>

@@ -50,8 +50,10 @@
   margin: 0 20px;
 }
 
-.nav-buttons_wrapper button {
-  margin: 0px 7px;
+.nav-buttons_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #search-bar {
@@ -60,12 +62,9 @@
   border-radius: 8px;
   width: 232px;
   height: 48px;
-  border: none;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-
   color: #9896A1;
 }
 
@@ -126,10 +125,6 @@
 }
 
 @media screen and (max-width: 425px) {
-  .notification-button {
-    display: none;
-  }
-
   .dashboard-item:nth-of-type(1) {
     order: 1;
   }

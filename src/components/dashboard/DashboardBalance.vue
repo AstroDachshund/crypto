@@ -25,7 +25,7 @@
 </template>
 <script>
 import BasicCardSmall from '../basic/BasicCardSmall.vue';
-import RectangleButton from '../buttons/RectangleButton.vue';
+import RectangleButton from '../buttons/basic/RectangleButton.vue';
 export default {
     name: 'DashboardBalance',
     props: ['name'],
