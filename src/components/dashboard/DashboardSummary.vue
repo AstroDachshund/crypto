@@ -1,17 +1,17 @@
 <template>
     <BasicCardSmall :name="'Summary'">
-        <BarChart />
+        <LineChart />
     </BasicCardSmall>
 </template>
 <script>
 import BasicCardSmall from '../basic/BasicCardSmall.vue';
-import BarChart from '../charts/BarChart.vue';
+import LineChart from '../charts/LineChart.vue';
 export default {
     name: 'DashboardSummary',
     props: ['name'],
     components: {
         BasicCardSmall,
-        BarChart,
+        LineChart,
     },
 };
 </script>
