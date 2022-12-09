@@ -100,4 +100,30 @@ export default {
     padding: 10px 20px;
     margin-right: 10px;
 }
+
+@media screen and (max-width: 426px) {
+    .balance-current {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .balance-comparison {
+        margin-top: 5px;
+        font-size: 0.8rem;
+    }
+
+    .balance-actions {
+        flex-direction: row;
+    }
+
+    .rise-icon_svg {
+        width: 8px;
+
+    }
+
+    .rise-icon {
+        height: 14px;
+        width: 14px;
+    }
+}
 </style>

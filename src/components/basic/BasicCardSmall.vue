@@ -17,6 +17,9 @@ export default {
 </script>
 <style scoped>
 .card-wrapper {
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
     max-width: 509px;
     height: 336px;
@@ -25,7 +28,7 @@ export default {
     border: none;
     color: #9896A1;
     margin: 30px 20px 0 20px;
-    padding: 0 30px;
+    padding: 0px 30px 10px 30px;
     flex: 2;
 }
 
@@ -56,6 +59,12 @@ export default {
 @media screen and (max-width: 768px) {
     .card-wrapper {
         flex: 1;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .card-wrapper {
+        height: 256px;
     }
 }
 </style>

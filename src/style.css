@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 :root {
   font-family: 'Source Sans Pro', sans-serif;
@@ -19,21 +19,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.wrapper {
-  display: flex;
-  justify-content: center;
 
-  width: 100%;
-  max-width: 1440px;
-  height: 900px;
-
-  margin: 0 auto;
-
-  background: #FFF;
-  border-radius: 24px;
-
-  overflow: hidden;
-}
 
 .sidebar-container {
   max-width: 264px;

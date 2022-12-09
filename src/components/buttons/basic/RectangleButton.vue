@@ -44,4 +44,12 @@ button {
     border: 1px solid rgba(116, 69, 251, 0.15);
     box-shadow: 0 0 7px rgba(116, 69, 251, 0.15);
 }
+
+@media screen and (max-width: 426px) {
+    button {
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+        padding: 10px 15px;
+    }
+}
 </style>

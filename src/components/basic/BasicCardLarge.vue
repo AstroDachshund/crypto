@@ -18,5 +18,6 @@ export default {
     border: none;
     color: #9896A1;
     margin: 30px 20px 0 20px;
+    padding: 0px 30px 10px 30px;
 }
 </style>

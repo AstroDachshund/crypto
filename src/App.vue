@@ -1,19 +1,19 @@
 
 <script>
-import BasicCardLarge from './components/basic/BasicCardLarge.vue';
 import SquareButton from './components/buttons/basic/SquareButton.vue';
 import NotificationButton from './components/buttons/NotificationButton.vue';
 import SearchBar from './components/buttons/SearchBar.vue';
 import DashboardBalance from './components/dashboard/DashboardBalance.vue';
 import DashboardSummary from './components/dashboard/DashboardSummary.vue';
+import DashboardTabs from './components/dashboard/DashboardTabs.vue';
 export default {
   components: {
     SquareButton,
     SearchBar,
-    BasicCardLarge,
     DashboardBalance,
     NotificationButton,
     DashboardSummary,
+    DashboardTabs,
   },
   data() {
     return {
@@ -55,12 +55,28 @@ export default {
       <section class="dashboard-container">
         <DashboardBalance class="dashboard-item"></DashboardBalance>
         <DashboardSummary class="dashboard-item"></DashboardSummary>
-        <BasicCardLarge class="dashboard-item"></BasicCardLarge>
+        <DashboardTabs class="dashboard-item"></DashboardTabs>
       </section>
     </div>
   </div>
 </template>
 <style scoped>
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 1440px;
+  height: 900px;
+
+  margin: 0 auto;
+
+  background: #FFF;
+  border-radius: 24px;
+
+  overflow: hidden;
+}
+
 .menu-button svg {
   transition: all 0.2s ease-in-out;
 }
