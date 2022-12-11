@@ -173,7 +173,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 #chart {
     max-height: 200px;
 }
