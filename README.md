@@ -3,6 +3,10 @@
 Based on Vue.js with chart.js library.
 
 ## How to turn on dev preview
-`npm install`
-`npm run dev`
+```
+npm install
+
+npm run dev
+```
+
 
