@@ -1,46 +1,20 @@
 <template>
     <div class="wrapper">
         <ul class="summary-list">
-            <li class="summary-list__item" v-for="crypto in cryptoData" :key="crypto.symbol">
-                <div class="list-title">
-                    <div class="list-icon">
-                        <img class="list-icon__img" :src="crypto.icon" :alt="crypto.name" />
-                    </div>
-                    <div class="list-element">
-                        <span class="list-element-key">{{ crypto.symbol }}</span>
-                        <span class="list-element-value">{{ crypto.name }}</span>
-                    </div>
-                </div>
-                <div class="list-element">
-                    <span class="list-element-key">Price</span>
-                    <span class="list-element-value">${{ crypto.price }}</span>
-                </div>
-                <div class="list-element">
-                    <span class="list-element-key">Change</span>
-                    <span class="list-element-value crypto-change" :class="changeColor(crypto.change)">
-                        {{ (crypto.change * 100).toFixed(2) }}%
-                        <font-awesome-icon class="change-icon" v-if="(crypto.change > 0)"
-                            icon="fa-solid fa-arrow-trend-up" />
-                        <font-awesome-icon class="change-icon" v-else icon="fa-solid fa-arrow-trend-down" />
-                    </span>
-                </div>
-                <CryptoLineChart :valueChange="crypto.change"></CryptoLineChart>
-                <div class="button-wrapper">
-                    <RectangleButton :mode="'secondary'">Sell</RectangleButton>
-                    <RectangleButton :mode="'primary'">Buy</RectangleButton>
-                </div>
-            </li>
+            <SummaryListItem :cryptoData="cryptoData"></SummaryListItem>
         </ul>
     </div>
 </template>
 <script>
 import RectangleButton from '../../buttons/basic/RectangleButton.vue';
 import CryptoLineChart from '../../charts/CryptoLineChart.vue';
+import SummaryListItem from './SummaryListItem.vue';
 export default {
     name: 'TabSummary',
     components: {
         RectangleButton,
         CryptoLineChart,
+        SummaryListItem,
     },
     data() {
         return {
@@ -51,7 +25,21 @@ export default {
                     price: 17241.80,
                     change: 0.0129,
                     icon: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png',
-                }
+                },
+                {
+                    name: 'Ethereum',
+                    symbol: 'ETH',
+                    price: 1194.34,
+                    change: -0.0089,
+                    icon: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png',
+                },
+                {
+                    name: 'EOS',
+                    symbol: 'EOS',
+                    price: 16242.10,
+                    change: 0.0239,
+                    icon: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1765.png',
+                },
             ],
         };
     },
