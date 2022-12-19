@@ -19,27 +19,6 @@ export default {
     DotButton,
     TheSidebar,
   },
-  data() {
-    return {
-      sidebarOpen: true,
-    };
-  },
-  methods: {
-    toggleSidebar() {
-      this.sidebarOpen = !this.sidebarOpen;
-    },
-  },
-  watch: {
-    sidebarOpen() {
-      if (this.sidebarOpen) {
-        document.querySelector('.sidebar-container').style.transform = 'translateX(0)';
-        document.querySelector('.sidebar-container').style.width = '100%';
-      } else {
-        document.querySelector('.sidebar-container').style.transform = 'translateX(-100%)';
-        document.querySelector('.sidebar-container').style.width = '0';
-      }
-    },
-  },
 };
 </script>
 
@@ -53,7 +32,7 @@ export default {
         <SearchBar></SearchBar>
         <div class="nav-buttons_wrapper">
           <NotificationButton class="notify"></NotificationButton>
-          <SquareButton class="menu-button" @click="toggleSidebar">
+          <SquareButton class="menu-button">
             <font-awesome-icon icon="fa-solid fa-bars" />
           </SquareButton>
         </div>
