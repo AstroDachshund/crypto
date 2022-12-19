@@ -8,7 +8,7 @@ export default {
     props: ['mode'],
 };
 </script>
-<style>
+<style scoped>
 button {
     border-radius: 4px;
     border: none;

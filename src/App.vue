@@ -1,11 +1,13 @@
 
 <script>
-import SquareButton from './components/buttons/basic/SquareButton.vue';
 import NotificationButton from './components/buttons/NotificationButton.vue';
 import SearchBar from './components/buttons/SearchBar.vue';
+import DotButton from './components/buttons/basic/DotButton.vue';
+import SquareButton from './components/buttons/basic/SquareButton.vue';
 import DashboardBalance from './components/dashboard/DashboardBalance.vue';
 import DashboardSummary from './components/dashboard/DashboardSummary.vue';
 import DashboardTabs from './components/dashboard/DashboardTabs.vue';
+import TheSidebar from './components/sidebar/TheSidebar.vue';
 export default {
   components: {
     SquareButton,
@@ -14,6 +16,8 @@ export default {
     NotificationButton,
     DashboardSummary,
     DashboardTabs,
+    DotButton,
+    TheSidebar,
   },
   data() {
     return {
@@ -41,7 +45,9 @@ export default {
 
 <template>
   <div class="wrapper">
-    <div class="sidebar-container"></div>
+    <div class="sidebar-container">
+      <TheSidebar></TheSidebar>
+    </div>
     <div class="main-container">
       <section class="nav-container">
         <SearchBar></SearchBar>

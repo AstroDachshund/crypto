@@ -2,17 +2,19 @@
     <div class="card-wrapper">
         <div class="card-header">
             <p>{{ name }}</p>
-            <button>
-                <font-awesome-icon class="dot-icon" icon="fa-solid fa-ellipsis-h" />
-            </button>
+            <DotButton />
         </div>
         <slot></slot>
     </div>
 </template>
 <script>
+import DotButton from '../buttons/basic/DotButton.vue';
 export default {
     name: 'BasicCardSmall',
-    props: ['name']
+    props: ['name'],
+    components: {
+        DotButton,
+    },
 };
 </script>
 <style scoped>
