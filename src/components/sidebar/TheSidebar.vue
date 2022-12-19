@@ -11,7 +11,7 @@
         <ul class="sidebar-menu-list">
             <li class="sidebar-menu-list__item">
                 <font-awesome-icon class="menu-icon sidebar-menu-list__item-content" icon="fa-solid fa-house-user" />
-                <span class="sidebar-menu-list__item-content">Overview</span>
+                <span class="sidebar-menu-list__item-content">Home</span>
             </li>
             <li class="sidebar-menu-list__item">
                 <font-awesome-icon class="menu-icon sidebar-menu-list__item-content"
